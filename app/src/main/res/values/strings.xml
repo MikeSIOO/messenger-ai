@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AI Messenger</string>
+    <string name="request_error">Error!\nClick to refresh</string>
+</resources>

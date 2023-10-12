@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dialoguesFragment">
+
+    <fragment
+        android:id="@+id/dialoguesFragment"
+        android:name="com.example.messenger_ai.dialogues.ui.DialoguesFragment"
+        android:label="dialogues_fragment"
+        tools:layout="@layout/fragment_dialogues">
+        <action
+            android:id="@+id/action_dialoguesFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.messenger_ai.chat.ui.ChatFragment"
+        android:label="chat_fragment"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="dialogue"
+            app:argType="com.example.messenger_ai.dialogues.data.api.DialoguesResponse$Dialogue" />
+    </fragment>
+
+</navigation>
