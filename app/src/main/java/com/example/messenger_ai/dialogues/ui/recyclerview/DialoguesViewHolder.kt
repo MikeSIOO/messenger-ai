@@ -6,11 +6,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.messenger_ai.R
-import com.example.messenger_ai.dialogues.data.api.DialoguesResponse
+import com.example.messenger_ai.dialogues.data.DialogueModel
 
 class DialoguesViewHolder(
     itemView: View,
-    private val callback: (dialogue: DialoguesResponse.Dialogue) -> Unit
+    private val callback: (dialogue: DialogueModel) -> Unit
 ) : RecyclerView.ViewHolder(itemView) {
     private val context by lazy { itemView.context }
 
@@ -19,7 +19,7 @@ class DialoguesViewHolder(
     private val message: TextView = itemView.findViewById(R.id.message)
     private val time: TextView = itemView.findViewById(R.id.time)
 
-    fun bind(dialogue: DialoguesResponse.Dialogue) {
+    fun bind(dialogue: DialogueModel) {
         Glide
             .with(context)
             .load(dialogue.avatar)

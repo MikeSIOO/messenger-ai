@@ -31,7 +31,7 @@ class DialoguesFragment : Fragment(R.layout.fragment_dialogues) {
     private lateinit var load: ProgressBar
     private lateinit var error: TextView
 
-    private val dialoguesAdapter = DialoguesAdapter { it ->
+    private val dialoguesAdapter = DialoguesAdapter {
         findNavController().navigate(
             DialoguesFragmentDirections.actionDialoguesFragmentToChatFragment(
                 it
@@ -88,7 +88,7 @@ class DialoguesFragment : Fragment(R.layout.fragment_dialogues) {
         }
 
         dialoguesViewModel.dialogues.observe(viewLifecycleOwner) {
-            dialoguesAdapter.dialogues = it.results
+            dialoguesAdapter.dialogues = it
             dialoguesAdapter.notifyDataSetChanged()
         }
     }

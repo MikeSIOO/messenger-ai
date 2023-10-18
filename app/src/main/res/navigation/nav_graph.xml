@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_chat">
         <argument
             android:name="dialogue"
-            app:argType="com.example.messenger_ai.dialogues.data.api.DialoguesResponse$Dialogue" />
+            app:argType="com.example.messenger_ai.dialogues.data.DialogueModel" />
     </fragment>
 
 </navigation>

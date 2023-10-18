@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.messenger_ai.R
-import com.example.messenger_ai.dialogues.data.api.DialoguesResponse
+import com.example.messenger_ai.dialogues.data.DialogueModel
 
-class DialoguesAdapter(private val callback: (dialogue: DialoguesResponse.Dialogue) -> Unit) :
+class DialoguesAdapter(private val callback: (dialogue: DialogueModel) -> Unit) :
     Adapter<DialoguesViewHolder>() {
-    var dialogues: ArrayList<DialoguesResponse.Dialogue> = arrayListOf()
+    var dialogues: List<DialogueModel> = arrayListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DialoguesViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
 

@@ -20,7 +20,7 @@ import com.example.messenger_ai.appComponent
 import com.example.messenger_ai.chat.ui.recyclerview.ChatAdapter
 import com.example.messenger_ai.chat.ui.viewmodel.ChatViewModel
 import com.example.messenger_ai.chat.ui.viewmodel.ChatViewModelFactory
-import com.example.messenger_ai.dialogues.data.api.DialoguesResponse
+import com.example.messenger_ai.dialogues.data.DialogueModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -28,7 +28,7 @@ import kotlin.properties.Delegates
 
 class ChatFragment : Fragment(R.layout.fragment_chat) {
     private val args: ChatFragmentArgs by navArgs()
-    private var dialogue by Delegates.notNull<DialoguesResponse.Dialogue>()
+    private var dialogue by Delegates.notNull<DialogueModel>()
 
     @Inject
     lateinit var factory: ChatViewModelFactory.Factory
